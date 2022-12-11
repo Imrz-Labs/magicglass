@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 import { idProps } from "../config/interface";
 
 export const About = (props: idProps) => {
@@ -37,11 +38,16 @@ export const About = (props: idProps) => {
             </span>
           </div>
           <div className="flex lg:w-full lg:justify-center lg:m-auto ">
-            <Link href="#contact">
+            <ScrollLink 
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}>
               <button className="rounded-full h-[60px] w-[300px] text-white font-bold bg-blue hover:bg-black">
                 BOOK A CONSULTATION
               </button>
-            </Link>
+            </ScrollLink>
           </div>
         </div>
       </section>

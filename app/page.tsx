@@ -3,19 +3,18 @@ import { About, Benefits, Form, Hero, Packages, Where } from "../components";
 export default function Home() {
   return (
     <>
-      {/*FOR IN PAGE SCROLLING PURPOSE, ALL CLIENT SIDE PAGE COMPONENTS HAVE BEEN MOVED TO THE HEADER COMPONENTS */}
 
-      {/* <Hero /> */}
+      <Hero id="hero"/>
 
-      {/* <About id="about" /> */}
+      <About id="about" />
 
-      {/* <Where id="where"/> */}
+      <Where id="where"/>
 
-      {/* <Benefits id="benefits"/> */}
+      <Benefits id="benefits"/>
 
-      {/* <Packages id="packages" /> */}
+      <Packages id="packages" />
 
-      {/* <Form id="contact" /> */}
+      <Form id="contact" />
 
     </>
   );
