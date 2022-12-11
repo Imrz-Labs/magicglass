@@ -9,7 +9,7 @@ export const Footer = () => {
       <section className="imrz-black pt-8">
         <div className="pl-48 lg:pl-0 imrz-black m-auto flex h-auto w-full items-center justify-around lg:flex-col lg:pt-10 ">
           {/*** Logo row***/}
-          <div className="">
+          <div className="flex flex-col gap-6">
             <Link href="https://www.imrzlabs.com/" className="">
               <img
                 className="h-auto object-cover w-[155px]"
@@ -17,7 +17,15 @@ export const Footer = () => {
                 alt="Imrz Labs"
               />
             </Link>
+            <Link href="https://gazookystudios.com/" className="">
+              <img
+                className="h-auto object-cover w-[155px]"
+                src="/gazooky-logo.png"
+                alt="Imrz Labs"
+              />
+            </Link>
           </div>
+          
           {/*** Links row***/}
           <div className="m-auto lg:my-10 uppercase">
             <div className="flex items-center justify-center space-x-10 text-center font-extrabold text-white md:w-full ">
