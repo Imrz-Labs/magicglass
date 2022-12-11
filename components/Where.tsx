@@ -21,25 +21,25 @@ export const Where = ( props: idProps ) => {
                 <div className="flex flex-col gap-y-4 justify-center text-center m-auto ">
                     <img src="/events.svg" alt="Events" className="h-[100px]" />
                     <h1>Events</h1>
-                    <p>Lorem ipsum dolor sit amet et eos appareat placerat.</p>
+                    {/* <p>Lorem ipsum dolor sit amet et eos appareat placerat.</p> */}
                 </div>
                
                 <div className="flex flex-col gap-y-4 justify-center text-center m-auto ">
                     <img src="/sports.svg" alt="Events" className="h-[100px]" />
                     <h1>Stadiums</h1>
-                    <p>Lorem ipsum dolor sit amet et eos appareat placerat.</p>
+                    {/* <p>Lorem ipsum dolor sit amet et eos appareat placerat.</p> */}
                 </div>
                
                 <div className="flex flex-col gap-y-4 justify-center text-center m-auto ">
                     <img src="/landmarks.svg" alt="Events" className="h-[100px]" />
                     <h1>Museums</h1>
-                    <p>Lorem ipsum dolor sit amet et eos appareat placerat.</p>
+                    {/* <p>Lorem ipsum dolor sit amet et eos appareat placerat.</p> */}
                 </div>
                
                 <div className="flex flex-col gap-y-4 justify-center text-center m-auto ">
                     <img src="/entertainment.svg" alt="Events" className="h-[100px]" />
                     <h1>Festivals</h1>
-                    <p>Lorem ipsum dolor sit amet et eos appareat placerat.</p>
+                    {/* <p>Lorem ipsum dolor sit amet et eos appareat placerat.</p> */}
                 </div>
                
             </div>

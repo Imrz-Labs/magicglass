@@ -13,8 +13,7 @@ export const Benefits = (props: idProps) => {
             Benefits
           </h1>
           <p className="lg:w-11/12 md:text-xs m-auto text-sm text-center">
-            Lorem ipsum dolor sit amet, et eos appareat placerat gloriatur vel
-            illum nonumes necessitatibus.
+            Magic Glass can drive a number of benefits for your brand
           </p>
         </div>
         {/** BENEFITS*/}
@@ -24,14 +23,18 @@ export const Benefits = (props: idProps) => {
             <div className="flex flex-col md:mb-20 md:justify-center md:flex-row h-full my-auto gap-y-20 mr-20 lg:mr-10 md:mr-auto">
               <div className="flex flex-col md:w-full gap-y-1 text-right md:text-left">
                 <h1 className="text-blue">Drive Engagement</h1>
-                <p className="md:text-tiny">Drive Live engagement in any space</p>
+                <p className="md:text-tiny">
+                  Drive Live engagement in any space
+                </p>
               </div>
               <span className="flex w-full md:w-auto items-end justify-end ">
                 <span className="w-7/12 h-[1px] md:h-3/5 md:w-[1px] md:bg-gray-light bg-blue flex justify-end md:justify-center"></span>
               </span>
               <div className="flex flex-col md:w-full gap-y-1 text-right">
                 <h1 className="text-blue">Branded</h1>
-                <p className="md:text-tiny">Promote partner brands through branded photo</p>
+                <p className="md:text-tiny">
+                  Promote partner brands through branded photo
+                </p>
               </div>
             </div>
             {/** mid layout*/}
@@ -49,14 +52,18 @@ export const Benefits = (props: idProps) => {
             <div className="flex flex-col md:mt-20 md:justify-center md:flex-row h-full my-auto gap-y-20 ml-20 lg:ml-10 md:ml-auto">
               <div className="flex flex-col md:w-full gap-y-1 text-left md:text-left">
                 <h1 className="text-blue">Amplify</h1>
-                <p className="md:text-tiny">Amplify your brand through social promotion</p>
+                <p className="md:text-tiny">
+                  Amplify your brand through social promotion
+                </p>
               </div>
               <span className="flex w-full md:w-auto items-start justify-start ">
                 <span className="w-7/12 h-[1px] md:h-3/5 md:w-[1px] md:bg-gray-light bg-blue flex justify-start md:justify-center"></span>
               </span>
               <div className="flex flex-col md:w-full gap-y-1 text-left md:text-right">
                 <h1 className="text-blue">Analyse</h1>
-                <p className="md:text-tiny">Collect data and analyse footfall</p>
+                <p className="md:text-tiny">
+                  Collect data and analyse footfall
+                </p>
               </div>
             </div>
           </div>
