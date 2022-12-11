@@ -40,7 +40,7 @@ export const Benefits = (props: idProps) => {
             {/** mid layout*/}
             <div className="">
               <video
-                className="max-w-sm md:h-2/5 h-4/5 rounded-xl shadow-effect"
+                className="max-w-sm sm:max-w-[200px] md:h-2/5 h-4/5 rounded-xl"
                 src="/magic-show.mp4"
                 autoPlay
                 loop
