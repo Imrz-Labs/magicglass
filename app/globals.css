@@ -1,26 +1,171 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url("https://use.typekit.net/wvk6guc.css");
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   html {
-    color-scheme: dark;
+    @apply overflow-x-hidden scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full hover:scrollbar-thumb-blue scrollbar-thumb-gray-light scrollbar-track-transparent;
   }
+
   body {
-    color: white;
-    background: black;
+    @apply imrz-bg-slate text-black;
   }
+
+  p {
+    @apply leading-8 font-normal;
+    font-family: Montserrat;
+  }
+
+  h1 {
+    text-transform: capitalize !important;
+    @apply font-heading
+  }
+
+  h2 {
+    @apply imrz-text-blue font-heading font-normal;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    @apply font-body m-auto;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+  }
+
+  a {
+    @apply imrz-text-black;
+    font-family: congenial, sans-serif !important;
+    font-weight: 700;
+    font-style: normal;
+
+  }
+
+  svg,
+  path:hover {
+    stroke: inherit;
+  }
+}
+
+@layer components {
+  .link-style-default {
+    @apply text-center w-full font-bold;
+  }
+  .logo-setting {
+    @apply md:object-scale-down lg:object-scale-down ml-20;
+  }
+  .button-pink {
+    @apply m-auto flex h-[65px] w-[300px] md:h-[50px] md:w-[165px] lg:w-[215px] md:text-tiny items-center justify-center rounded-md font-extrabold hover:text-white imrz-pink hover:bg-brand-gradient px-5 text-xs uppercase text-white shadow transition ease-in-out hover:duration-150;
+  }
+  .form-input {
+    @apply rounded-lg border-0 w-full bg-white py-4 shadow outline-none focus:outline-none pl-5;
+  }
+  .imrz-4{
+    @apply py-16 m-auto grid w-10/12 grid-cols-4 xl:w-11/12 md:grid-cols-1 md:gap-12 lg:grid lg:grid-cols-2 sm:flex sm:flex-wrap h-auto
+  }
+  .imrz-card-wrapper {
+    @apply m-auto grid w-10/12 grid-cols-4 items-center 4xl:pb-20 justify-center py-4 2xl:w-11/12 2xl:gap-3 4xl:gap-10 4xl:flex xl:flex lg:grid lg:grid-cols-2 sm:flex sm:flex-wrap;
+  }
+  .imrz-card {
+    @apply flex shadow-sm w-[300px] h-[450px] lg:w-auto lg:h-[500px] md:w-auto sm:w-11/12 sm:h-auto sm:pb-10 flex-col rounded-3xl bg-white hover:shadow-base;
+  }
+  .imrz-card-img {
+    @apply px-3 pt-3 rounded-2xl lg:w-full ;
+  }
+  .imrz-team-img {
+    @apply rounded-[100px] w-[150px] h-[150px] mx-auto;
+  }
+  .imrz-card-heading {
+    @apply mb-3 text-center w-full text-xs font-bold xl:text-sm lg:text-xs md:text-xs;
+  }
+  .imrz-card-paragraph {
+    @apply m-auto w-11/12 text-center leading-snug;
+  }
+  .imrz-heading-2 {
+    @apply normal-case m-auto leading-[50px] xl:w-9/12 3xl:w-9/12 xl:text-base lg:w-10/12 md:w-10/12 lg:text-sm sm:w-full sm:text-sm text-center text-base font-extrabold text-black;
+  }
+  .imrz-heading-3 {
+    @apply uppercase font-extrabold w-full leading-[50px] xl:text-sm lg:text-sm md:text-xs sm:text-tiny text-center text-xs text-blue-500 md:w-11/12;
+  }
+  .agency-services {
+    @apply m-auto w-auto lg:mb-12 sm:w-full sm:h-auto justify-center items-center flex flex-col;
+  }
+  .agency-icons {
+    @apply h-[100px] w-[100px] mx-auto rounded-full bg-white shadow-md p-3 mb-6 ;
+  }
+  .imrz-h1-hero {
+    @apply normal-case flex justify-center items-center w-7/12 m-auto text-center text-base sm:text-sm font-bold lg:w-10/12 md:w-11/12 lg:p-0;
+  }
+  .imrz-b-hero {
+    @apply flex w-9/12 m-auto lg:w-full justify-center items-center;
+  }
+  .hero-h1 {
+    @apply font-extrabold mx-auto 4xl:text-lg w-full text-center text-xl leading-[80px] 3xl:w-6/12 xl:w-10/12 xl:text-lg lg:w-10/12 md:w-11/12 md:text-base sm:text-sm;
+  }
+  .hero-p {
+    @apply mx-auto w-6/12 text-center text-sm 4xl:text-sm 4xl:leading-8 leading-[46px] 3xl:w-7/12 3xl:px-10 md:px-0 xl:w-10/12 lg:w-10/12 md:w-10/12 md:text-xs;
+  }
+  .font-heading {
+    @apply font-bold uppercase;
+  }
+  .card {
+    @apply bg-white flex flex-row md:flex-col gap-x-16 gap-y-10 w-full md:px-6 md:pt-6 md:pb-10 px-10 py-10 shadow-base rounded-3xl;
+  }
+  .card-res {
+    @apply mx-auto space-y-12 md:space-y-6 w-9/12 2xl:w-10/12 xl:w-11/12;
+  }
+  .ribbon {
+    @apply w-full bg-black text-white h-[100px] md:h-auto flex flex-row justify-center items-center px-10 gap-x-10 text-xs font-bold md:flex-col md:p-10 md:gap-y-4 md:text-center;
+  }
+  .ribbon-cta {
+    @apply h-full relative flex justify-center items-center my-auto;
+  }
+}
+
+@layer utilities {
+  .badge-wrapper {
+    @apply flex justify-center mt-4 indicator-item font-normal text-tiny badge h-4 bg-black text-white m-auto border-none;
+  }
+  .bg-brand-gradient {
+    background: linear-gradient(
+      237.53deg,
+      #11faec -14.26%,
+      #0eb2f9 25.45%,
+      #8451bd 71.55%,
+      #ce17d6 88.74%,
+      #fe36ae 108.75%
+    );
+  }
+  .imrz-black {
+    color: #ffffff;
+    @apply bg-black;
+  }
+  .imrz-text-black {
+    @apply text-black;
+  }
+  .imrz-pink {
+    color: #ffffff;
+    @apply bg-pink;
+  }
+  .imrz-text-pink {
+    @apply text-pink;
+  }
+  .imrz-blue {
+    color: #ffffff;
+    @apply bg-blue;
+  }
+  .imrz-text-blue {
+    @apply text-blue;
+  }
+  .imrz-bg-slate {
+    background: #f7fafc;
+  }
+  .orkit-effect-light {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(32px);
+    @apply shadow-effect
+  }
+
 }
