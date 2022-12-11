@@ -79,7 +79,7 @@ export const Header = () => {
               {/**  Drawer content here **/}
               <label
                 htmlFor="my-drawer-4"
-                tabIndex="2"
+                tabIndex={2}
                 className="btn btn-ghost btn-circle z-50 mt-2 overflow-hidden"
               >
                 <svg
