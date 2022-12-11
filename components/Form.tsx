@@ -26,25 +26,30 @@ export const Form = (props: idProps) => {
     }));
   };
   // Form Submit function
-  const formSubmit = (e: { preventDefault: () => void }) => {
-    router.push(`/thanks${inputValue}`);
-    e.preventDefault();
-    const formData = new FormData();
-    Object.entries(query).forEach(([key, value]) => {
-      formData.append(key, value);
-    });
-    fetch("https://getform.io/f/fff5dcb9-386d-4296-8b90-143becb470a8", {
-      method: "POST",
-      body: formData,
-    }).then(() =>
-      setQuery({
-        forename: "",
-        surname: "",
-        email: "",
-        company: "",
-        message: "",
-      })
-    );
+  const formSubmit = async (e: { preventDefault: () => void }) => {
+    try {
+      router.push(`/thanks${inputValue}`);
+      e.preventDefault();
+      const formData = new FormData();
+      Object.entries(query).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+      await fetch ("https://getform.io/f/fff5dcb9-386d-4296-8b90-143becb470a8", {
+        method: "POST",
+        body: formData,
+      }).then(() =>
+        setQuery({
+          forename: "",
+          surname: "",
+          email: "",
+          company: "",
+          message: "",
+        })
+      );
+    } catch (error) {
+      console.log(error)
+      alert(error);
+    }
   };
 
   return (
