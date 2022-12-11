@@ -136,7 +136,7 @@ export const Header = () => {
           {/*** Logo ***/}
           <div className="flex flex-row h-full w-full object-scale-down mx-auto m-auto justify-center items-center">
             <Link href="/">
-              <img src="/logo.svg" className="flex h-[30px]" alt="Imrz Labs" />
+              <img src="/logo.svg" className="flex h-[20px]" alt="Imrz Labs" />
             </Link>
           </div>
 
