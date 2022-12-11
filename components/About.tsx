@@ -1,11 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import { idProps } from "../config/interface";
 
-export const About = () => {
+export const About = (props: idProps) => {
+  const { id } = props;
   return (
     <>
-      <section id="about" className="flex flex-row w-full h-auto justify-center items-center py-20 bg-white lg:flex-col">
+      <section
+        id={id}
+        className="flex flex-row w-full h-auto justify-center items-center py-20 bg-white lg:flex-col"
+      >
         {/**Banner */}
         <div className="w-full h-full object-cover lg:pb-7">
           <img src="/magic-banner.png" className="h-full w-8/12 m-auto " />
@@ -25,7 +30,7 @@ export const About = () => {
               <img src="tick.svg" className="mr-10" /> Animations
             </span>
             <span className="flex flex-row mb-4">
-              <img src="tick.svg" className="mr-10" /> Green Screen
+              <img src="tick.svg" className="mr-10" /> Live Action
             </span>
             <span className="flex flex-row">
               <img src="tick.svg" className="mr-10" /> Volumetric Scans

@@ -1,9 +1,12 @@
 "use client";
 
-export const Benefits = () => {
+import { idProps } from "../config/interface";
+
+export const Benefits = (props: idProps) => {
+  const { id } = props;
   return (
     <>
-      <main className="flex flex-col w-full h-auto py-20 bg-white ">
+      <main id={id} className="flex flex-col w-full h-auto py-20 bg-white ">
         {/** Title */}
         <div className="flex w-full justify-center flex-col mb-20">
           <h1 className="m-auto text-base font-bold text-center mb-3">

@@ -1,14 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import { idProps } from "../config/interface";
 
-export const Hero = () => {
+export const Hero = (props: idProps) => {
+  const { id } = props;
   return (
     <>
       {/* //Hero */}
-      <section className="w-full flex justify-center items-center lg:bg-blue-500">
+      <main id={id} className="w-full flex justify-center items-center lg:bg-blue-500">
         <img
-          src="/hero.png"
+          src="/hero.jpg"
           className="flex h-screen w-full object-cover items-center md:hidden "
         />
         <div className="absolute mt-10 md:relative md:h-screen md:items-center left-20 md:flex md:flex-col md:justify-center md:ml-0  md:left-0 md:w-full md:m-auto">
@@ -26,7 +28,7 @@ export const Hero = () => {
             </button>
           </Link>
         </div>
-      </section>
+      </main>
     </>
   );
 };

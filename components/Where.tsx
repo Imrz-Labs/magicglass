@@ -1,9 +1,12 @@
 "use client";
 
-export const Where = () => {
+import { idProps } from "../config/interface";
+
+export const Where = ( props: idProps ) => {
+  const { id } = props;
   return (
     <>
-      <main className="bg-blue-500 py-20 flex flex-col w-full h-auto">
+      <main id={id} className="bg-blue-500 py-20 flex flex-col w-full h-auto">
         {/** Title */}
         <div className="flex w-full justify-center flex-col mb-20">
           <h1 className="m-auto text-base font-bold text-center mb-3">Where</h1>

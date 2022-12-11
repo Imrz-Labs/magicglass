@@ -1,5 +1,6 @@
-import {AriaAttributes, DOMAttributes } from 'react'
+import { HTMLAttributes } from 'react'
 
-export interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
-    
+
+export interface idProps {
+    id?: HTMLAttributes<HTMLElement>["id"]
 }

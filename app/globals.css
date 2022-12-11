@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    @apply overflow-x-hidden scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full hover:scrollbar-thumb-blue scrollbar-thumb-gray-light scrollbar-track-transparent;
+    @apply scroll-smooth overflow-x-hidden scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full hover:scrollbar-thumb-blue scrollbar-thumb-gray-light scrollbar-track-transparent;
   }
 
   body {
@@ -41,6 +41,9 @@
     font-weight: 700;
     font-style: normal;
 
+  }
+  Link, ScrollLink{
+      @apply cursor-pointer
   }
 
   svg,

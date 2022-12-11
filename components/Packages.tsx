@@ -1,8 +1,12 @@
 "use client";
-export const Packages = () => {
+
+import { idProps } from "../config/interface";
+
+export const Packages = (props: idProps) => {
+  const { id } = props;
   return (
     <>
-      <main className="bg-blue-500 py-20 flex flex-col w-full h-auto">
+      <main id={id} className="bg-blue-500 py-20 flex flex-col w-full h-auto">
         {/** Title */}
         <div className="flex w-full justify-center flex-col mb-20">
           <h1 className="m-auto text-base font-bold text-center mb-3">
@@ -34,14 +38,9 @@ export const Packages = () => {
             </div>
 
             <div className="flex flex-col gap-y-4 justify-left text-left ">
-              <img
-                src="/4.svg"
-                alt="4"
-                className="h-[100px]"
-              />
+              <img src="/4.svg" alt="4" className="h-[100px]" />
               <h1>Scale Up</h1>
-              <p>Projects can be fixed
-cost or scale with usage.</p>
+              <p>Projects can be fixed cost or scale with usage.</p>
             </div>
           </div>
         </section>

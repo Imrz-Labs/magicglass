@@ -1,4 +1,4 @@
-import { Footer, Form, Header } from "../components";
+import { Footer, Header } from "../components";
 import "./globals.css";
 import { Montserrat } from "@next/font/google";
 
@@ -17,7 +17,6 @@ export default function RootLayout({
       <body>
         <Header />
         <main>{children}</main>
-        <Form />
         <Footer />
       </body>
     </html>

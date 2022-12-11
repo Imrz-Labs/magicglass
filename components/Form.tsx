@@ -1,8 +1,10 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { idProps } from "../config/interface";
 
-export const Form = () => {
+export const Form = (props: idProps) => {
+  const { id } = props;
   const [inputValue] = useState("");
   const router = useRouter();
 
@@ -47,7 +49,7 @@ export const Form = () => {
 
   return (
     <>
-      <div id="contact" className="bg-blue w-full pt-16">
+      <div id={id} className="bg-blue w-full pt-16">
         <h2 className="py-20 text-center text-base font-bold text-white md:text-sm">
           Get In Touch
         </h2>

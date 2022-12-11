@@ -1,6 +1,13 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Where } from "./Where";
+import { About } from "./About";
+import { Hero } from "./Hero";
+import { Benefits } from "./Benefits";
+import { Form } from "./Form";
+import { Packages } from "./Packages";
 
 export const Header = () => {
   return (
@@ -13,55 +20,85 @@ export const Header = () => {
       <main className="orkit-effect-light z-[999] top-0 font-heading fixed flex h-[85px] w-full items-center md:m-0 md:hidden md:flex-col md:items-center ">
         {/*** Logo ***/}
         <div className="my-auto flex 2xl:ml-auto xl:ml-[-10px] lg:m-auto md:mx-auto  md:mr-[-15%] md:mt-5 md:w-auto sm:ml-[-55px]">
-          <Link href="/">
+          <ScrollLink 
+          activeClass="active"
+          to="hero"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          >
             <Image
               src="/logo.svg"
-              className="logo-setting"
+              className="logo-setting cursor-pointer"
               alt="Imrz Labs"
               width={250}
               height={32}
             />
-          </Link>
+          </ScrollLink>
         </div>
 
         {/***Nav Items - Links & CTA ***/}
         <div className="mr-[3.5rem] flex w-full justify-end 2xl:w-full md:mx-auto md:mt-[-70%] md:flex-col">
           <nav className="lg:text-tiny my-auto mr-10 flex items-start space-x-10 lg:space-x-10 md:m-auto md:flex-col md:space-y-20 ">
-            <Link
-              href="#about"
-              className="link-style-default ui-active:imrz-blue hover:text-blue-500"
+            <ScrollLink
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="cursor-pointer link-style-default hover:text-blue"
             >
               About
-            </Link>
-            <Link
-              href="#where"
-              className="link-style-default hover:text-pink-500"
+            </ScrollLink>
+            <ScrollLink
+              to="where"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="cursor-pointer link-style-default hover:text-pink-500"
             >
               Where
-            </Link>
-            <Link
-              href="#benefits"
-              className="link-style-default hover:text-blue"
+            </ScrollLink>
+
+            <ScrollLink
+              to="benefits"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="cursor-pointer link-style-default hover:text-blue"
             >
               Benefits
-            </Link>
-            <Link
-              href="#packages"
-              className="link-style-default hover:text-pink"
+            </ScrollLink>
+            <ScrollLink
+              to="packages"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="cursor-pointer link-style-default hover:text-pink"
             >
               Packages
-            </Link>
+            </ScrollLink>
           </nav>
 
           {/***Nav CTA ***/}
-          <Link href="#contact">
+          <ScrollLink
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
             <button
               type="button"
               className="hover:bg-black imrz-blue h-[50px] w-[150px] rounded-md px-5 text-xs font-semibold uppercase text-white shadow lg:h-[45px] lg:w-[100px] lg:text-tiny md:m-auto md:mb-5 md:ml-[80%] sm:ml-[76%]"
             >
               Contact
             </button>
-          </Link>
+          </ScrollLink>
         </div>
       </main>
 
@@ -110,24 +147,52 @@ export const Header = () => {
               <ul className="imrz-text menu w-full absolute orkit-effect-light p-4 overflow-hidden">
                 {/**  Sidebar content here **/}
                 <li>
-                  <Link href="#about" className="ui-selected:imrz-blue">
+                  <ScrollLink
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className="ui-selected:text-blue"
+                  >
                     About
-                  </Link>
+                  </ScrollLink>
                 </li>
                 <li>
-                  <Link href="#where" className="ui-selected:imrz-pink">
+                  <ScrollLink
+                    to="where"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className="ui-selected:text-pink"
+                  >
                     Where
-                  </Link>
+                  </ScrollLink>
                 </li>
                 <li>
-                  <Link href="#benefits" className="ui-selected:imrz-blue">
+                  <ScrollLink
+                    to="benefits"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className="ui-selected:imrz-blue"
+                  >
                     Benefits
-                  </Link>
+                  </ScrollLink>
                 </li>
                 <li>
-                  <Link href="#packages" className="ui-active:imrz-pink">
+                  <ScrollLink
+                    to="packages"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className="ui-active:text-pink"
+                  >
                     Packages
-                  </Link>
+                  </ScrollLink>
                 </li>
               </ul>
             </div>
@@ -135,23 +200,43 @@ export const Header = () => {
 
           {/*** Logo ***/}
           <div className="flex flex-row h-full w-full object-scale-down mx-auto m-auto justify-center items-center">
-            <Link href="/">
+            <ScrollLink 
+            activeClass="active"
+            to="hero"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            
+            >
               <img src="/logo.svg" className="flex h-[20px]" alt="Imrz Labs" />
-            </Link>
+            </ScrollLink>
           </div>
 
           {/***Nav CTA ***/}
 
           <div className="flex items-center justify-end">
-            <Link href="/contact">
+            <ScrollLink
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
               <button
                 type="button"
                 className="justify-self-end hover:bg-black imrz-blue h-[40px] w-[120px] rounded-md object-scale-down text-tiny font-semibold uppercase text-white shadow transition ease-in-out hover:duration-150 sm:hidden"
               >
                 Contact
               </button>
-            </Link>
-            <Link href="/contact">
+            </ScrollLink>
+            <ScrollLink
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
               <button className="imrz-blue btn btn-ghost rounded-lg md:hidden sm:flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -163,10 +248,23 @@ export const Header = () => {
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </button>
-            </Link>
+            </ScrollLink>
           </div>
         </div>
       </div>
+
+      {/*********************************Hero********************************/}
+      <Hero id="hero" />
+      {/*********************************About********************************/}
+      <About id="about" />
+      {/*********************************Where********************************/}
+      <Where id="where" />
+      {/*********************************Benefits********************************/}
+      <Benefits id="benefits" />
+      {/*********************************Packages********************************/}
+      <Packages id="packages" />
+      {/*********************************Contact********************************/}
+      <Form id="contact" />
     </>
   );
 };
