@@ -20,7 +20,7 @@ export const Benefits = (props: idProps) => {
         <section className="w-full flex justify-center items-center md:flex-col">
           <div className="w-11/12 md:w-10/12 flex flex-row md:flex-col justify-center items-center ">
             {/** left layout*/}
-            <div className="flex flex-col md:mb-20 sm:mb-6 md:justify-center md:flex-row h-full my-auto gap-y-20 mr-20 lg:mr-10 md:mr-auto">
+            <div className="flex flex-col md:mb-20 sm:mb-6 sm:gap-y-0  md:justify-center md:flex-row h-full my-auto gap-y-20 mr-20 lg:mr-10 md:mr-auto">
               <div className="flex flex-col md:w-full gap-y-1 text-right md:text-left">
                 <h1 className="text-blue">Drive Engagement</h1>
                 <p className="md:text-tiny">
@@ -40,7 +40,7 @@ export const Benefits = (props: idProps) => {
             {/** mid layout*/}
             <div className="">
               <video
-                className="max-w-sm md:h-2/5 h-4/5 rounded-xl"
+                className="max-w-sm md:h-2/5 h-4/5 sm:w-11/12 flex justify-center m-auto rounded-xl"
                 src="/magic-show.mp4"
                 autoPlay
                 loop
@@ -49,7 +49,7 @@ export const Benefits = (props: idProps) => {
             </div>
             {/** right layout*/}
 
-            <div className="flex flex-col md:mt-20 sm:mt-6 md:justify-center md:flex-row h-full my-auto gap-y-20 ml-20 lg:ml-10 md:ml-auto">
+            <div className="flex flex-col md:mt-20 sm:mt-6 sm:gap-y-0  md:justify-center md:flex-row h-full my-auto gap-y-20 ml-20 lg:ml-10 md:ml-auto">
               <div className="flex flex-col md:w-full gap-y-1 text-left md:text-left">
                 <h1 className="text-blue">Amplify</h1>
                 <p className="md:text-tiny">

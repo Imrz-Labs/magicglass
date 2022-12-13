@@ -22,7 +22,7 @@ export const Packages = (props: idProps) => {
             <div className="flex flex-col gap-y-4 justify-start text-left">
               <img src="/1.svg" alt="1" className="h-[100px]" />
               <h1>Rent or Buy </h1>
-              <p>Lorem ipsum dolor sit amet et eos appareat placerat.</p>
+              <p>Suitable for long term and short term set ups.</p>
             </div>
 
             <div className="flex flex-col gap-y-4 justify-left text-left ">
