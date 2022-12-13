@@ -5,22 +5,11 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {},
-  },
   plugins: [
     require('@headlessui/tailwindcss'),
     require("daisyui"),
     require("tailwind-scrollbar")({ nocompatible: true }),
   ],
-  preflight: {
-    fontFamily: {
-      fontFamily: "congenial, sans-serif",
-      sans: ["var(--font-montserrat)"],
-    },
-    fontWeight: "500",
-    src: 'url(https://use.typekit.net/wvk6guc.css) format("otf")',
-  },
 
   safelist: [
     "w-64",
@@ -40,16 +29,16 @@ module.exports = {
   ],
 
   theme: {
+      fontFamily: {
+        'congenial': ["congenial, sans-serif"],
+        'montserrat': ["var(--font-montserrat)"],
+      },
     colors: {
       white: { DEFAULT: "#ffffff", 500: "#F7FAFC" },
       black: { DEFAULT: "#1D1D1D", 500: "#2B2F4B" },
       pink: { DEFAULT: "#E6007E", 500: "#EF0381" },
       blue: { DEFAULT: "#1996FC", 500: "#F3FAFF" },
       gray: { light: "#CACED9", dark: "#7E7D8D" },
-    },
-    fontFamily: {
-      heading: ["congenial, sans-serif"],
-      body: ["congenial, sans-serif"],
     },
     fontSize: {
       tiny: ["12px"],
