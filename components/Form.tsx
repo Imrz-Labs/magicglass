@@ -34,7 +34,7 @@ export const Form = (props: idProps) => {
       Object.entries(query).forEach(([key, value]) => {
         formData.append(key, value);
       });
-      await fetch ("https://getform.io/f/fff5dcb9-386d-4296-8b90-143becb470a8", {
+      await fetch("https://getform.io/f/fff5dcb9-386d-4296-8b90-143becb470a8", {
         method: "POST",
         body: formData,
       }).then(() =>
@@ -47,15 +47,15 @@ export const Form = (props: idProps) => {
         })
       );
     } catch (error) {
-      console.log(error)
+      console.log(error);
       alert(error);
     }
   };
 
   return (
     <>
-      <div id={id} className="bg-blue w-full pt-16">
-        <h2 className="py-20 text-center text-base font-bold text-white md:text-sm">
+      <div id={id} className="bg-black w-full py-20">
+        <h2 className="pb-10 text-center capitalize text-base font-bold text-white md:text-sm">
           Get In Touch
         </h2>
 
@@ -67,7 +67,7 @@ export const Form = (props: idProps) => {
           <div className="imrz-text-black grid grid-cols-2 gap-5">
             {/**First Name**/}
             <div className="mb-3 pt-0">
-              <p className="text-white font-heading">First Name</p>
+              <p className="text-white font-normal">First Name</p>
               <input
                 type="text"
                 name="forename"
@@ -80,7 +80,7 @@ export const Form = (props: idProps) => {
 
             {/**Last Name**/}
             <div className="mb-3 pt-0">
-              <p className="text-white font-heading">Last Name</p>
+              <p className="text-white font-normal">Last Name</p>
               <input
                 type="text"
                 name="surname"
@@ -97,7 +97,7 @@ export const Form = (props: idProps) => {
           <div className="imrz-text-black grid grid-cols-2 gap-5">
             {/**Email**/}
             <div className="mb-3 pt-0">
-              <p className="text-white font-heading">Email</p>
+              <p className="text-white font-normal">Email</p>
               <input
                 type="email"
                 name="email"
@@ -110,7 +110,7 @@ export const Form = (props: idProps) => {
 
             {/**Company Name**/}
             <div className="mb-3 pt-0">
-              <p className="text-white font-heading">Company Name</p>
+              <p className="text-white font-normal">Company Name</p>
               <input
                 type="text"
                 name="company"
@@ -125,7 +125,7 @@ export const Form = (props: idProps) => {
           {/********************************Message Description********************************/}
 
           <div className="mb-3 pt-0">
-            <p className="text-white font-heading">Description (Optional)</p>
+            <p className="text-white font-normal">Description (Optional)</p>
             <textarea
               name="message"
               className="form-input"
@@ -134,9 +134,12 @@ export const Form = (props: idProps) => {
             />
           </div>
 
-          <div className="py-20">
-            <button type="submit" className="button-pink bg-black">
-              Submit
+          <div className="py-10 flex justify-center">
+            <button
+              type="submit"
+              className="button"
+            >
+              Book A Consultation
             </button>
           </div>
         </form>

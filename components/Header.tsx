@@ -1,32 +1,53 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import { Where } from "./Where";
-import { About } from "./About";
-import { Hero } from "./Hero";
-import { Benefits } from "./Benefits";
-import { Form } from "./Form";
-import { Packages } from "./Packages";
 
 export const Header = () => {
+  /********************************(STATES)********************************/
+
+  const [isHeaderFixed, setIsHeaderFixed] = useState(false);
+
+  /********************************(FUNCTIONS)********************************/
+
+  const handleHeaderFixed = () => {
+    if (window.scrollY >= 100) {
+      setIsHeaderFixed(true);
+    } else {
+      setIsHeaderFixed(false);
+    }
+  };
+
+  /********************************(USE EFFECT)********************************/
+  useEffect(() => {
+    window.addEventListener("scroll", handleHeaderFixed);
+    return () => {
+      window.removeEventListener("scroll", handleHeaderFixed);
+    };
+  }, []);
+
   return (
     <>
       {/********************************ORKIT BORDER********************************/}
-      <div className="z-[1000] top-0 bg-black w-full h-[2px] fixed"></div>
+      <div className="z-[1000] top-0 bg-blue w-full h-[2px] fixed"></div>
 
       {/********************************desktop navbar********************************/}
 
-      <main className="orkit-effect-light z-[999] top-0 font-heading fixed flex h-[85px] w-full items-center md:m-0 md:hidden md:flex-col md:items-center ">
+      <main
+        className={`
+      ${isHeaderFixed ? "bg-black shadow-effect fixed" : "bg-transparent"}
+      z-[999] top-0 font-heading flex h-[85px] w-full items-center md:m-0 md:hidden md:flex-col md:items-center`}
+      >
         {/*** Logo ***/}
         <div className="my-auto flex 2xl:ml-auto xl:ml-[-10px] lg:m-auto md:mx-auto  md:mr-[-15%] md:mt-5 md:w-auto sm:ml-[-55px]">
-          <ScrollLink 
-          activeClass="active"
-          to="hero"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
+          <ScrollLink
+            activeClass="active"
+            to="hero"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
           >
             <Image
               src="/logo.svg"
@@ -94,17 +115,17 @@ export const Header = () => {
           >
             <button
               type="button"
-              className="hover:bg-black imrz-blue h-[50px] w-[150px] rounded-md px-5 text-xs font-semibold uppercase text-white shadow lg:h-[45px] lg:w-[100px] lg:text-tiny md:m-auto md:mb-5 md:ml-[80%] sm:ml-[76%]"
+              className="hover:bg-white hover:text-blue bg-blue h-[50px] w-[150px] rounded-full px-5 font-bold uppercase text-white text-tiny shadow lg:h-[45px] lg:w-[100px] lg:text-tiny md:m-auto md:mb-5 md:ml-[80%] sm:ml-[76%]"
             >
-              Contact
+              Get In Touch
             </button>
           </ScrollLink>
         </div>
       </main>
 
       {/********************************mobile navbar********************************/}
-      <div className="orkit-effect-light fixed z-50 top-0 hidden h-[64px] w-full md:flex flex-row pr-[6px]">
-        <div className="orkit-effect-light flex flex-row justify-between items-center w-full">
+      <div className="bg-black fixed z-50 top-0 hidden h-[64px] w-full md:flex flex-row pr-[6px]">
+        <div className="bg-transparent flex flex-row justify-between items-center w-full">
           {/*** Nav ***/}
           <div className="navbar-start w-[120px]">
             <input
@@ -144,7 +165,7 @@ export const Header = () => {
 
             <div className="drawer-side">
               <label htmlFor="my-drawer-4" className="drawer-overlay"></label>
-              <ul className="imrz-text menu w-full absolute orkit-effect-light p-4 overflow-hidden">
+              <ul className="imrz-text menu w-full absolute bg-black p-4 overflow-hidden">
                 {/**  Sidebar content here **/}
                 <li>
                   <ScrollLink
@@ -200,16 +221,15 @@ export const Header = () => {
 
           {/*** Logo ***/}
           <div className="flex flex-row h-full w-full object-scale-down mx-auto m-auto justify-center items-center">
-            <ScrollLink 
-            activeClass="active"
-            to="hero"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-            
+            <ScrollLink
+              activeClass="active"
+              to="hero"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
             >
-              <img src="/logo.svg" className="flex h-[20px]" alt="Imrz Labs" />
+              <img src="/logo.svg" className="flex m-auto lg:w-8/12 h-[20px]" alt="Imrz Labs" />
             </ScrollLink>
           </div>
 
@@ -237,7 +257,7 @@ export const Header = () => {
               offset={-70}
               duration={500}
             >
-              <button className="imrz-blue btn btn-ghost rounded-lg md:hidden sm:flex">
+              <button className="imrz-blue btn btn-ghost rounded-full md:hidden sm:flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-7 w-7"

@@ -6,7 +6,7 @@ export const Where = ( props: idProps ) => {
   const { id } = props;
   return (
     <>
-      <main id={id} className="bg-blue-500 py-20 flex flex-col w-full h-auto">
+      <main id={id} className="bg-black py-20 flex flex-col w-full h-auto">
         {/** Title */}
         <div className="flex w-full justify-center flex-col mb-20">
           <h1 className="m-auto text-base font-bold text-center mb-3">Where</h1>
@@ -17,28 +17,42 @@ export const Where = ( props: idProps ) => {
         </div>
         {/** Grid Layout*/}
        <section className="w-full flex justify-center items-center">
-            <div className="flex flex-row lg:grid lg:grid-flow-row lg:grid-cols-2 gap-5 w-11/12 justify-center items-center">
+            <div className="flex flex-row lg:grid lg:grid-flow-row lg:grid-cols-2 gap-5 md:gap-10 w-11/12 justify-center items-center">
                 <div className="flex flex-col gap-y-4 justify-center text-center m-auto ">
-                    <img src="/events.svg" alt="Events" className="h-[100px]" />
-                    <h1>Events</h1>
+                    <img src="/events.svg" alt="Events" className="h-[75px]" />
+                    <span className="font-semibold uppercase ">Events</span>
                     {/* <p>Lorem ipsum dolor sit amet et eos appareat placerat.</p> */}
                 </div>
                
                 <div className="flex flex-col gap-y-4 justify-center text-center m-auto ">
-                    <img src="/sports.svg" alt="Events" className="h-[100px]" />
-                    <h1>Stadiums</h1>
+                    <img src="/sports.svg" alt="Events" className="h-[75px]" />
+                    <span className="font-semibold uppercase ">Stadiums</span>
                     {/* <p>Lorem ipsum dolor sit amet et eos appareat placerat.</p> */}
                 </div>
                
                 <div className="flex flex-col gap-y-4 justify-center text-center m-auto ">
-                    <img src="/landmarks.svg" alt="Events" className="h-[100px]" />
-                    <h1>Museums</h1>
+                    <img src="/landmarks.svg" alt="Events" className="h-[75px]" />
+                    <span className="font-semibold uppercase ">Museums</span>
                     {/* <p>Lorem ipsum dolor sit amet et eos appareat placerat.</p> */}
                 </div>
                
                 <div className="flex flex-col gap-y-4 justify-center text-center m-auto ">
-                    <img src="/entertainment.svg" alt="Events" className="h-[100px]" />
-                    <h1>Festivals</h1>
+                    <img src="/entertainment.svg" alt="Events" className="h-[75px]" />
+                    <span className="font-semibold uppercase ">Festivals</span>
+                    {/* <p>Lorem ipsum dolor sit amet et eos appareat placerat.</p> */}
+                </div>
+               
+               
+                <div className="flex flex-col gap-y-4 justify-center text-center m-auto ">
+                    <img src="/arenas.svg" alt="Events" className="h-[75px]" />
+                    <span className="font-semibold uppercase ">Arenas</span>
+                    {/* <p>Lorem ipsum dolor sit amet et eos appareat placerat.</p> */}
+                </div>
+               
+               
+                <div className="flex flex-col gap-y-4 justify-center text-center m-auto ">
+                    <img src="/retailers.svg" alt="Events" className="h-[75px]" />
+                    <span className="font-semibold uppercase ">Retailers</span>
                     {/* <p>Lorem ipsum dolor sit amet et eos appareat placerat.</p> */}
                 </div>
                

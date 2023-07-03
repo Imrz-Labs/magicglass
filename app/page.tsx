@@ -1,21 +1,34 @@
-import { About, Benefits, Form, Hero, Packages, Where } from "../components";
+import {
+  About,
+  Stats,
+  Benefits,
+  Footer,
+  Form,
+  Header,
+  Hero,
+  Packages,
+  Where,
+} from "../components";
 
-export default function Home() {
+export default function Page() {
   return (
     <>
+      <Header id="header" />
 
-      <Hero id="hero"/>
+      <Hero id="hero" />
+
 
       <About id="about" />
 
-      <Where id="where"/>
+      <Where id="where" />
 
-      <Benefits id="benefits"/>
+      <Benefits id="benefits" />
 
       <Packages id="packages" />
 
       <Form id="contact" />
 
+      <Footer id="footer" />
     </>
   );
 }

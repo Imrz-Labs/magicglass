@@ -5,13 +5,12 @@
 @import url("https://use.typekit.net/wvk6guc.css");
 
 @layer base {
-
   html {
     @apply font-montserrat scroll-smooth overflow-x-hidden scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full hover:scrollbar-thumb-blue scrollbar-thumb-gray-light scrollbar-track-transparent;
   }
 
   body {
-    @apply imrz-bg-slate text-black;
+    @apply bg-black text-white;
   }
 
   p {
@@ -20,35 +19,34 @@
   }
 
   h1 {
-    /* font-family: congenial, sans-serif !important;  */
+    /* font-family: montserrat, sans-serif !important;  */
     text-transform: capitalize !important;
-    @apply font-heading font-congenial
+    @apply font-heading font-montserrat;
   }
 
   h2 {
-    @apply imrz-text-blue font-heading font-normal font-congenial;
+    @apply imrz-text-blue font-heading font-normal font-montserrat;
     text-transform: uppercase;
-    /* font-family: congenial, sans-serif !important;  */
-
+    /* font-family: montserrat, sans-serif !important;  */
   }
 
   h3 {
-    @apply font-congenial m-auto;
+    @apply font-montserrat m-auto;
     font-style: normal !important;
     font-weight: 400 !important;
     font-size: 18px !important;
-    /* font-family: congenial, sans-serif !important;  */
+    /* font-family: montserrat, sans-serif !important;  */
   }
 
   a {
     @apply imrz-text-black;
-    font-family: congenial, sans-serif !important; 
+    font-family: montserrat, sans-serif !important;
     font-weight: 700;
     font-style: normal;
-
   }
-  Link, ScrollLink{
-      @apply cursor-pointer
+  Link,
+  ScrollLink {
+    @apply cursor-pointer;
   }
 
   svg,
@@ -59,19 +57,19 @@
 
 @layer components {
   .link-style-default {
-    @apply text-center w-full font-bold;
+    @apply text-center text-white w-full font-bold;
   }
   .logo-setting {
     @apply md:object-scale-down lg:object-scale-down ml-20;
   }
-  .button-pink {
-    @apply m-auto flex h-[65px] w-[300px] md:h-[50px] md:w-[165px] lg:w-[215px] md:text-tiny items-center justify-center rounded-md font-extrabold hover:text-white imrz-pink hover:bg-brand-gradient px-5 text-xs uppercase text-white shadow transition ease-in-out hover:duration-150;
+  .button {
+    @apply rounded-full uppercase font-normal h-[60px] w-[275px] text-white bg-blue hover:bg-white hover:text-blue 
   }
   .form-input {
-    @apply rounded-lg border-0 w-full bg-white py-4 shadow outline-none focus:outline-none pl-5;
+    @apply rounded-lg border-0 w-full bg-white text-black py-4 shadow outline-none focus:outline-none pl-5;
   }
-  .imrz-4{
-    @apply py-16 m-auto grid w-10/12 grid-cols-4 xl:w-11/12 md:grid-cols-1 md:gap-12 lg:grid lg:grid-cols-2 sm:flex sm:flex-wrap h-auto
+  .imrz-4 {
+    @apply py-16 m-auto grid w-10/12 grid-cols-4 xl:w-11/12 md:grid-cols-1 md:gap-12 lg:grid lg:grid-cols-2 sm:flex sm:flex-wrap h-auto;
   }
   .imrz-card-wrapper {
     @apply m-auto grid w-10/12 grid-cols-4 items-center 4xl:pb-20 justify-center py-4 2xl:w-11/12 2xl:gap-3 4xl:gap-10 4xl:flex xl:flex lg:grid lg:grid-cols-2 sm:flex sm:flex-wrap;
@@ -80,7 +78,7 @@
     @apply flex shadow-sm w-[300px] h-[450px] lg:w-auto lg:h-[500px] md:w-auto sm:w-11/12 sm:h-auto sm:pb-10 flex-col rounded-3xl bg-white hover:shadow-base;
   }
   .imrz-card-img {
-    @apply px-3 pt-3 rounded-2xl lg:w-full ;
+    @apply px-3 pt-3 rounded-2xl lg:w-full;
   }
   .imrz-team-img {
     @apply rounded-[100px] w-[150px] h-[150px] mx-auto;
@@ -101,7 +99,7 @@
     @apply m-auto w-auto lg:mb-12 sm:w-full sm:h-auto justify-center items-center flex flex-col;
   }
   .agency-icons {
-    @apply h-[100px] w-[100px] mx-auto rounded-full bg-white shadow-md p-3 mb-6 ;
+    @apply h-[100px] w-[100px] mx-auto rounded-full bg-white shadow-md p-3 mb-6;
   }
   .imrz-h1-hero {
     @apply normal-case flex justify-center items-center w-7/12 m-auto text-center text-base sm:text-sm font-bold lg:w-10/12 md:w-11/12 lg:p-0;
@@ -173,7 +171,6 @@
   .orkit-effect-light {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(32px);
-    @apply shadow-effect
+    @apply shadow-effect;
   }
-
 }
